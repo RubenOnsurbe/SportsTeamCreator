@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SportsTeamCreator';
   paco = 'pepe';
+
+
+  saludar(){
+    alert("Hola");
+  }
 }
