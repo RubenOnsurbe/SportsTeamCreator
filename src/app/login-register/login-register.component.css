@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #c1bdba;
+    font-family: "Ubuntu", helvetica;
+    zoom: 0.8;
+}
+
+a {
+    text-decoration: none;
+    color: #557FFF;
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: #4a69c6;
+}
+
+.contenedor-formularios {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+}
+
+.contenedor-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+
+.contenedor-tabs:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contenedor-tabs li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 2px solid black;
+}
+
+.contenedor-tabs li a:hover {
+    background: #4a69c6;
+    color: white;
+}
+
+.contenedor-tabs .active a {
+    background: #557FFF;
+    color: white;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 13px;
+    color: black;
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+label .req {
+    margin: 2px;
+    color: #557FFF;
+}
+
+label.active {
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+label.active .req {
+    opacity: 0;
+}
+
+label.highlight {
+    color: black;
+}
+
+input {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a69c6;
+}
+
+.contenedor-input {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.fila-arriba:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fila-arriba div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.fila-arriba div:last-child {
+    margin: 0;
+}
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 2rem;
+    background: #557FFF;
+    color: white;
+    font-weight: 500;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+.button2 {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    background: #557FFF;
+    color: white;
+    font-weight: 500;
+    border: 2px solid black;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+.button:hover,
+.button:focus,
+.button2:hover,
+.button2:focus {
+    background: #4a69c6;
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #4a69c6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .fila-arriba div {
+        width: 100%;
+    }
+
+    .fila-arriba div:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contenedor-tabs li a {
+        width: 100%;
+    }
+}

@@ -1,115 +1,128 @@
+.header {
+    background-color: #557FFF;
 
-    .header {
-        background-color: #fc9020;
-      
+}
+
+.botonResponsive {
+
+    color: #51ade5
+}
+
+#btn-empezar {
+
+
+    background-color: #38bc34;
+    font-weight: 700;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 40px;
+
+    text-decoration: none;
+
+    border: 0;
+
+}
+
+#btn-empezar:hover {
+    background-color: blue;
+    color: #c2fbd7;
+}
+
+.opcion-header:hover {
+    color: blue;
+
+
+}
+
+.navLink {
+    color: #c2fbd7;
+}
+
+
+.opcion-header,
+.login-text {
+    color: white;
+
+    font-weight: 700;
+}
+
+section {
+    margin-top: 30px;
+}
+
+section,
+.body {
+    background-color: #f5fbff;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: bold;
+    font-size: clamp(58px, 38px, 18px);
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 38px;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 38px;
+        /* Tamaño de fuente más pequeño para pantallas pequeñas */
     }
 
-    .botonResponsive{
-      
-        color: #51ade5
+    h2 {
+        font-size: 20px;
     }
 
-    #btn-empezar{
-     
-        
-          background-color: #38bc34;
-          font-weight: 700;
-          border-radius: 100px;
-          box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-          color: white;
-          cursor: pointer;
-          display: inline-block;
-          font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-          padding: 7px 40px;
-
-          text-decoration: none;
-          
-          border: 0;
-               
-    }
-
-    #btn-empezar:hover{
-        background-color: blue;
-        color: #c2fbd7;
-    }
-
-    .opcion-header:hover{
-        color: blue;
-       
-      
-    }
-     .navLink{
-        color: #c2fbd7;
-    }
-
-
-    .opcion-header,.login-text{
-        color: white;
-      
-        font-weight: 700;
-    }
-    section{
+    .informacion {
         margin-top: 30px;
     }
 
-    section,.body{
-        background-color: #f5fbff;
-    }
 
-    h1{
-        font-size: 58px;
-        font-weight: bold;
-        font-size: clamp(58px, 38px, 18px);
-        
-    }
-    h2{
-        font-weight: bold;
-        font-size: 38px;
-    }
-    @media (max-width: 576px) {
-        h1 {
-          font-size: 38px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-        }
-        h2{
-            font-size: 20px;
-        }
-        .informacion{
-            margin-top: 30px;
-        }
-       
+}
 
-    }
-    p{
-        font-size:20px
-    }
+p {
+    font-size: 20px
+}
 
-    .informacion{
-        background-color: white;
-        margin-top: 100px;
-        padding-top: 100px;
-    }
-    
-    .titulo-margen {
-        margin-left: 15%; /* Ajusta el valor según sea necesario */
-        margin-right: 15%; /* Ajusta el valor según sea necesario */
-    }
+.informacion {
+    background-color: white;
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.titulo-margen {
+    margin-left: 15%;
+    /* Ajusta el valor según sea necesario */
+    margin-right: 15%;
+    /* Ajusta el valor según sea necesario */
+}
 
 
-    .nClubes{
-        font-size: 92px;
-        font-weight: 600;
-        color: white;
-    }
-    .cifras{
-        font-size: 92px;
-        font-weight: 600;
-    }
-    
-    .nClubes1{
-        background-color: #fc9020;
-        
-    }
-    .pieCifra{
-        font-weight: bold;
-        color: #102cac;
-    }
+.nClubes {
+    font-size: 92px;
+    font-weight: 600;
+    color: white;
+}
+
+.cifras {
+    font-size: 92px;
+    font-weight: 600;
+}
+
+.nClubes1 {
+    background-color: #557FFF;
+
+}
+
+.pieCifra {
+    font-weight: bold;
+    color: #102cac;
+}

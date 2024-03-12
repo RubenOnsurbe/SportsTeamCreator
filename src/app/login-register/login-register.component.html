@@ -1,0 +1,94 @@
+<button class="button2" routerLink="/">INICIO</button>
+<div class="contenedor-formularios">
+    <ul class="contenedor-tabs">
+        <li class="tab tab-segunda" [class.active]="mostrarIniciarSesion"><a
+                (click)="toggleFormulario('iniciar-sesion')">Iniciar Sesión</a></li>
+        <li class="tab tab-primera" [class.active]="mostrarRegistrarse"><a
+                (click)="toggleFormulario('registrarse')">Registrarse</a></li>
+    </ul>
+
+    <div class="contenido-tab">
+
+        <!-- Iniciar Sesion -->
+        <div id="iniciar-sesion" [hidden]="!mostrarIniciarSesion">
+            <h1>Iniciar Sesión</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+                <div class="contenedor-input">
+                    <label>
+                        Correo <span class="req">*</span>
+                    </label>
+                    <input type="email" formControlName="email" required>
+                </div>
+
+                <div class="contenedor-input">
+                    <label>
+                        Contraseña <span class="req">*</span>
+                    </label>
+                    <input type="password" formControlName="password" required>
+                </div>
+                <p class="forgot" (click)="toggleFormulario('recuperar-contrasena')">Se te olvidó la contraseña?</p>
+                <button type="submit" class="button button-block" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+            </form>
+        </div>
+
+        <!-- Registrarse -->
+        <div id="registrarse" [hidden]="!mostrarRegistrarse">
+            <h1>Registrarse</h1>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+                <div class="fila-arriba">
+                    <div class="contenedor-input">
+                        <label>
+                            Nombre <span class="req">*</span>
+                        </label>
+                        <input id="name" type="text" formControlName="name" required>
+                    </div>
+
+                    <div class="contenedor-input">
+                        <label>
+                            Apellido <span class="req">*</span>
+                        </label>
+                        <input type="text" formControlName="lastName" required>
+                    </div>
+                </div>
+                <div class="contenedor-input">
+                    <label>
+                        Fecha de Nacimiento <span class="req">*</span>
+                    </label>
+                    <input type="text" id="fecha" formControlName="fecha" required pattern="\d{2}/\d{2}/\d{4}"
+                        title="Formato válido: DD/MM/AAAA">
+                </div>
+                <div class="contenedor-input">
+                    <label>
+                        Email <span class="req">*</span>
+                    </label>
+                    <input type="email" formControlName="email" required>
+                </div>
+                <div class="contenedor-input">
+                    <label>
+                        Contraseña <span class="req">*</span>
+                    </label>
+                    <input id="password" type="password" formControlName="password" required>
+                </div>
+
+                <div class="contenedor-input">
+                    <label>
+                        Repetir Contraseña <span class="req">*</span>
+                    </label>
+                    <input id="confirm_password" type="password" formControlName="confirmPassword" required>
+                </div>
+
+                <button type="submit" class="button button-block" [disabled]="registerForm.invalid">Registrarse</button>
+            </form>
+        </div>
+        <!-- Recuperar Contraseña -->
+        <div id="recuperar-contrasena" [hidden]="!mostrarrecuperar_contrasena">
+            <form [formGroup]="resetPassForm" (ngSubmit)="onSubmitResetPass()">
+                <h1>Recuperar Contraseña</h1>
+                <div class="contenedor-input"> <label> Correo<span class="req">*</span> </label> <input id="email"
+                        type="email" formControlName="email" required> </div>
+                <button type="submit" class="button button-block" [disabled]="resetPassForm.invalid">Enviar
+                    Correo</button>
+            </form>
+        </div>
+    </div>
+</div>
