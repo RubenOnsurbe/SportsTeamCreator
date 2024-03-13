@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PruebaService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  url = 'http://127.0.0.1:8000/api/prueba'; 
+  url = 'http://127.0.0.1:8000/api/prueba';
 
 
-  holaMundo(){
-    return this.http.get(`${this.url}`);
+  holaMundo() {
+    return this.http.get(`${this.url}?respuesta=hola mundo`);
   }
 
 

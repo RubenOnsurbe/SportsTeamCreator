@@ -11,8 +11,7 @@
 
 body {
     background: #c1bdba;
-    font-family: "Ubuntu", helvetica;
-    zoom: 0.8;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
 }
 
 a {
@@ -202,8 +201,12 @@ input:focus {
     margin-top: -20px;
     text-align: right;
     margin-bottom: 20px;
-    color: #4a69c6;
+    color: #557FFF;
     cursor: pointer;
+}
+
+.forgot:hover {
+    color: #4a69c6;
 }
 
 @media screen and (max-width: 500px) {

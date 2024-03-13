@@ -13,11 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 
+
 const appRoutes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'login-register', component: LoginRegisterComponent }
+  { path: 'login-register', component: LoginRegisterComponent },
 
 
 ];
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
       timeOut: 2000,
       closeButton: true,
       progressBar: true,
-      preventDuplicates: true,
+      preventDuplicates: true
     }),
   ],
   providers: [

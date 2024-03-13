@@ -9,33 +9,26 @@
 }
 
 #btn-empezar {
-
-
-    background-color: #38bc34;
+    background-color: #557FFF;
     font-weight: 700;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
     color: white;
     cursor: pointer;
     display: inline-block;
     font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 7px 40px;
-
     text-decoration: none;
-
     border: 0;
-
 }
 
 #btn-empezar:hover {
-    background-color: blue;
-    color: #c2fbd7;
+    background-color: #4a69c6;
+    color: white;
 }
 
-.opcion-header:hover {
-    color: blue;
-
-
+.opcion-header:hover,
+.iniciar-sesion:hover {
+    color: #4a69c6;
 }
 
 .navLink {
@@ -69,6 +62,12 @@ h1 {
 h2 {
     font-weight: bold;
     font-size: 38px;
+}
+
+.iniciar-sesion {
+    text-decoration: none;
+    list-style: none;
+    color: white;
 }
 
 @media (max-width: 576px) {

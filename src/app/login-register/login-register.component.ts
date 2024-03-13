@@ -1,8 +1,20 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import $ from 'jquery';
 
+const dateValidator: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
+  if (control && control.value) {
+    const fechaInput = new Date(control.value);
+    const fechaActual = new Date();
+
+    if (isNaN(fechaInput.getTime()) || fechaInput >= fechaActual) {
+      return { 'invalidDate': true };
+    }
+  }
+
+  return null;
+};
 @Component({
   selector: 'app-login-register',
   templateUrl: './login-register.component.html',
@@ -69,13 +81,18 @@ export class LoginRegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+
+    if (this.mostrarIniciarSesion) {
+
+    }
   }
 
   initializeRegisterForm(): void {
     this.registerForm = this.formBuilder.group({
+      dni: ['', Validators.required],
       name: ['', Validators.required],
       lastName: ['', Validators.required],
-      fecha: ['', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}$/)]],
+      fecha: ['', [Validators.required, Validators.pattern(/^\d{4}\/\d{2}\/\d{2}$/), dateValidator]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
@@ -102,7 +119,6 @@ export class LoginRegisterComponent implements OnInit {
       confirmPassword?.setErrors(null);
     }
   }
-
 
   onSubmitLogin() {
     if (this.loginForm.valid) {
