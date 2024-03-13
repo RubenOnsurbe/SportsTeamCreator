@@ -14,7 +14,7 @@ export class ControlUsersService {
   }
 
   register(data: any) {
-    return this.http.post(`${this.URL}/register`, data);
+    return this.http.post(`${this.URL}/crear-usuario`, data);
   }
 
 }

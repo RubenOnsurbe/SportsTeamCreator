@@ -142,7 +142,16 @@ export class LoginRegisterComponent implements OnInit {
   onSubmitRegister() {
     if (this.registerForm.valid) {
       this.toastr.success('Formulario válido');
-      console.log(this.usuario);
+      this.ControlUser.register(this.usuario).subscribe(
+        response => {
+          console.log('Respuesta de la solicitud:', response);
+        },
+        error => {
+          console.error('Error en la solicitud:', error);
+          alert('Error en la solicitud. Consulta la consola para más detalles.');
+          console.error('Detalles del error:', error instanceof ErrorEvent ? error.error : error);
+        }
+      );
     } else {
       this.toastr.error('Formulario inválido');
     }
