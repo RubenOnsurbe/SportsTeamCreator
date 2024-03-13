@@ -3,7 +3,9 @@ import { FormGroup, FormBuilder, Validators, ValidatorFn, AbstractControl } from
 import { ToastrService } from 'ngx-toastr';
 import $ from 'jquery';
 import { ControlUsersService } from '../control-users.service';
-import { Usuario } from '../shared/usuario.interface';
+import { UsuarioR, UsuarioL } from '../shared/usuario.interface';
+import { response } from 'express';
+import { error } from 'console';
 
 
 const dateValidator: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
@@ -31,13 +33,17 @@ export class LoginRegisterComponent implements OnInit {
   loginForm!: FormGroup;
   registerForm!: FormGroup;
   resetPassForm!: FormGroup;
-  usuario: Usuario = {
+  usuarioR: UsuarioR = {
     dni: '',
     nombre: '',
     apellidos: '',
     correo: '',
     contrasena: '',
     fechanacimiento: ''
+  };
+  usuarioL: UsuarioL = {
+    correo: '',
+    contrasena: ''
   };
 
   constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private ControlUser: ControlUsersService) { }
@@ -92,10 +98,6 @@ export class LoginRegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
-
-    if (this.mostrarIniciarSesion) {
-
-    }
   }
 
   initializeRegisterForm(): void {
@@ -133,7 +135,25 @@ export class LoginRegisterComponent implements OnInit {
 
   onSubmitLogin() {
     if (this.loginForm.valid) {
-      this.toastr.success('Formulario válido');
+      this.ControlUser.login(this.usuarioL).subscribe(
+        response => {
+          console.log('Respuesta de la solicitud:', response);
+          const respuesta = Object.values(response);
+          if (respuesta.includes("correo")) {
+            this.toastr.error('El correo no está registrado');
+          } else if (respuesta.includes("contrasena")) {
+            this.toastr.error('La contraseña es incorrecta');
+          } else {
+            sessionStorage.setItem('DNI', respuesta[0]);
+            this.toastr.success('Usuario logueado correctamente');
+          }
+        },
+        error => {
+          console.error('Error en la solicitud:', error);
+          alert('Error en la solicitud. Consulta la consola para más detalles.');
+          console.error('Detalles del error:', error instanceof ErrorEvent ? error.error : error);
+        }
+      );
     } else {
       this.toastr.error('Formulario inválido');
     }
@@ -141,10 +161,22 @@ export class LoginRegisterComponent implements OnInit {
 
   onSubmitRegister() {
     if (this.registerForm.valid) {
-      this.toastr.success('Formulario válido');
-      this.ControlUser.register(this.usuario).subscribe(
+      this.ControlUser.register(this.usuarioR).subscribe(
         response => {
           console.log('Respuesta de la solicitud:', response);
+          const respuesta = Object.values(response);
+          if (respuesta.includes("dni")) {
+            this.toastr.error('El DNI ya está registrado');
+            if (respuesta.includes("correo")) {
+              this.toastr.error('El correo ya está registrado');
+            }
+          } else if (respuesta.includes("correo")) {
+            this.toastr.error('El correo ya está registrado');
+          } else {
+            this.mostrarIniciarSesion = true;
+            this.mostrarRegistrarse = false;
+            this.toastr.success('Usuario registrado correctamente');
+          }
         },
         error => {
           console.error('Error en la solicitud:', error);

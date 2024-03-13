@@ -10,7 +10,7 @@ export class ControlUsersService {
   readonly URL = 'http://127.0.0.1:8000/api';
 
   login(data: any) {
-    return this.http.post(`${this.URL}/login`, data);
+    return this.http.post(`${this.URL}/iniciarSesion`, data);
   }
 
   register(data: any) {

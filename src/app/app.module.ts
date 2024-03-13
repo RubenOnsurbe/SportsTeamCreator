@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { HomeLogedComponent } from './home-loged/home-loged.component';
 
 
 
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     LoginRegisterComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    HomeLogedComponent
   ],
   imports: [
     BrowserModule,
