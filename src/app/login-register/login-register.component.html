@@ -49,7 +49,7 @@
                     <label>
                         DNI <span class="req">*</span>
                     </label>
-                    <input id="dni" type="text" formControlName="dni">
+                    <input id="dni" name="dni" type="text" formControlName="dni" [(ngModel)]=usuario.dni>
                 </div>
                 <div class="text-danger" *ngIf="registerForm.get('name')?.errors?.['required']">Nombre es
                     obligatorio
@@ -58,7 +58,7 @@
                     <label>
                         Nombre <span class="req">*</span>
                     </label>
-                    <input id="name" type="text" formControlName="name">
+                    <input id="name" name="name" type="text" formControlName="name" [(ngModel)]=usuario.nombre>
                 </div>
                 <div class="text-danger" *ngIf="registerForm.get('lastName')?.errors?.['required']">Apellido es
                     obligatorio
@@ -67,7 +67,8 @@
                     <label>
                         Apellido <span class="req">*</span>
                     </label>
-                    <input type="text" formControlName="lastName">
+                    <input type="text" id="apellidos" name="apellidos" formControlName="lastName"
+                        [(ngModel)=usuario.apellidos]>
                 </div>
                 <div class="text-danger" *ngIf="registerForm.get('fecha')?.errors?.['required']">Fecha es obligatoria
                 </div>
@@ -79,7 +80,8 @@
                     <label>
                         Fecha de Nacimiento <span class="req">*</span>
                     </label>
-                    <input type="text" id="fecha" formControlName="fecha">
+                    <input type="text" id="fecha" name="fecha" formControlName="fecha"
+                        [(ngModel)]=usuario.fechanacimiento>
                 </div>
                 <div class="text-danger" *ngIf="registerForm.get('email')?.errors?.['required']">Correo es obligatorio
                 </div>
@@ -90,7 +92,7 @@
                     <label>
                         Email <span class="req">*</span>
                     </label>
-                    <input type="email" formControlName="email">
+                    <input type="email" formControlName="email" [(ngModel)]=usuario.correo>
                 </div>
                 <div class="text-danger" *ngIf="registerForm.get('password')?.errors?.['required']">Contraseña es
                     obligatorio
@@ -99,7 +101,8 @@
                     <label>
                         Contraseña <span class="req">*</span>
                     </label>
-                    <input id="password" type="password" formControlName="password">
+                    <input id="password" name="password" type="password" formControlName="password"
+                        [(ngModel)]=usuario.contrasena>
                 </div>
                 <div class="contenedor-input">
                     <label>

@@ -1,7 +1,10 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import $ from 'jquery';
+import { ControlUsersService } from '../control-users.service';
+import { Usuario } from '../shared/usuario.interface';
+
 
 const dateValidator: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
   if (control && control.value) {
@@ -28,15 +31,23 @@ export class LoginRegisterComponent implements OnInit {
   loginForm!: FormGroup;
   registerForm!: FormGroup;
   resetPassForm!: FormGroup;
+  usuario: Usuario = {
+    dni: '',
+    nombre: '',
+    apellidos: '',
+    correo: '',
+    contrasena: '',
+    fechanacimiento: ''
+  };
 
-  constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private renderer: Renderer2) { }
+  constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private ControlUser: ControlUsersService) { }
 
   ngOnInit(): void {
     this.initializeLoginForm();
     this.initializeRegisterForm();
     this.initializeResetPassForm();
 
-    this.renderer.listen('document', 'DOMContentLoaded', () => {
+    $(document).ready(() => {
       $(".contenedor-formularios").find("input, textarea").on("keyup blur focus", function (e: Event) {
         var $this = $(this),
           label = $this.prev("label");
@@ -131,6 +142,7 @@ export class LoginRegisterComponent implements OnInit {
   onSubmitRegister() {
     if (this.registerForm.valid) {
       this.toastr.success('Formulario válido');
+      console.log(this.usuario);
     } else {
       this.toastr.error('Formulario inválido');
     }

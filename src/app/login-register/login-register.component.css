@@ -81,6 +81,7 @@ h1 {
 }
 
 label {
+    padding-left: 10px;
     position: absolute;
     transform: translateY(6px);
     left: 13px;

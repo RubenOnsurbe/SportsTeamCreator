@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login-register', component: LoginRegisterComponent },
+  { path: 'calendario', component: CalendarioComponent },
 
 
 ];
@@ -29,7 +32,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    CalendarioComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,8 @@ const appRoutes: Routes = [
       progressBar: true,
       preventDuplicates: true
     }),
+    FullCalendarModule,
+
   ],
   providers: [
     provideClientHydration()
