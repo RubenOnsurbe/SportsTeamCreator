@@ -55,10 +55,13 @@
                 <h3>No tienes clubes</h3>
             </div>
             <div *ngIf="clubes.length > 0" class="card-deck">
-                <div class="card" *ngFor="let club of clubes">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ club.nombre }}</h5>
-                    </div>
+                <div class="card m-3" *ngFor="let club of clubes">
+                    <a class="text-decoration-none text-dark" routerLink="/club/{{club.id_club}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ club.nombre }}</h5>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
