@@ -51,7 +51,6 @@ export class HomeLogedComponent {
   unirseAClub() {
     const dni = sessionStorage.getItem('DNI');
     if (dni) {
-      console.log('DNI:', dni, 'UsuarioClub:', this.usuarioClub, 'CodigoAcceso:', this.codigoAcceso);
       this.ControlUser.unirseAClub({ DNI: dni, usuarioClub: this.usuarioClub, codigoAcceso: this.codigoAcceso }).subscribe(
         response => {
           const respuesta = response.toString();
@@ -72,6 +71,8 @@ export class HomeLogedComponent {
           console.error('Detalles del error:', error instanceof ErrorEvent ? error.error : error);
         }
       );
+      this.usuarioClub = '';
+      this.codigoAcceso = '';
     } else {
       console.error('No se encontró el DNI en el sessionStorage.');
     }
@@ -79,11 +80,37 @@ export class HomeLogedComponent {
 
   crearClub() {
     const dni = sessionStorage.getItem('DNI');
-    if (dni && this.nombreClub && this.usuarioClub && this.codigoAcceso) {
-      this.ControlUser.crearClub({ DNI: dni, nombre: this.nombreClub, usuarioClub: this.usuarioClub2, codigoAcceso: this.codigoAcceso }).subscribe(
+    if (dni && this.nombreClub && this.usuarioClub2 && this.codigoAcceso) {
+      if (this.usuarioClub2.includes(' ')) {
+        this.toastr.warning('El nombre de usuario del club no puede contener espacios en blanco.');
+      } else {
+        this.ControlUser.crearClub({ DNI: dni, nombre: this.nombreClub, usuarioClub: this.usuarioClub2, codigoAcceso: this.codigoAcceso }).subscribe(
+          response => {
+            console.log('Respuesta de la solicitud:', response);
+            this.mostrarFormulario = false;
+            this.ngOnInit();
+          },
+          error => {
+            console.error('Error en la solicitud:', error);
+            alert('Error en la solicitud. Consulta la consola para más detalles.');
+            console.error('Detalles del error:', error instanceof ErrorEvent ? error.error : error);
+          }
+        );
+        this.nombreClub = '';
+        this.usuarioClub2 = '';
+        this.codigoAcceso = '';
+      }
+    } else {
+      this.toastr.warning('Por favor, completa todos los campos.');
+    }
+  }
+
+  dejarClub(idClub: number) {
+    const dni = sessionStorage.getItem('DNI');
+    if (dni) {
+      this.ControlUser.dejarClub({ DNI: dni, id_club: idClub }).subscribe(
         response => {
-          console.log('Respuesta de la solicitud:', response);
-          this.mostrarFormulario = false;
+          this.toastr.success('Has salido del equipo correctamente');
           this.ngOnInit();
         },
         error => {
@@ -93,9 +120,9 @@ export class HomeLogedComponent {
         }
       );
     } else {
-      console.error('Por favor, completa todos los campos.');
-      alert('Por favor, completa todos los campos.');
+      console.error('No se encontró el DNI en el sessionStorage.');
     }
   }
+
 
 }

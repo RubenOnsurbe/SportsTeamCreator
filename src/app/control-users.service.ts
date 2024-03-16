@@ -27,5 +27,8 @@ export class ControlUsersService {
   unirseAClub(data: any) {
     return this.http.post(`${this.URL}/unirseAClub`, data);
   }
+  dejarClub(data: any) {
+    return this.http.post(`${this.URL}/dejarClub`, data);
+  }
 
 }

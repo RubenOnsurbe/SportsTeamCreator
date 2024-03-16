@@ -27,7 +27,7 @@
 }
 
 .opcion-header:hover,
-.iniciar-sesion:hover {
+.cerrar-sesion:hover {
     color: #4a69c6;
 }
 
@@ -64,7 +64,7 @@ h2 {
     font-size: 38px;
 }
 
-.iniciar-sesion {
+.cerrar-sesion {
     text-decoration: none;
     list-style: none;
     color: white;

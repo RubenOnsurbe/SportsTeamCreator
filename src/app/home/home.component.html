@@ -5,10 +5,10 @@
             <div class="col">
                 <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt="" width="20%"></a>
             </div>
-            <button class="navbar-toggler botonResponsive" type="button" data-bs-toggle="collapse"
+
+            <button class="navbar-toggler botonResponsive btn-light text-light" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                aria-label="Toggle navigation"><i class="fas fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarText">
@@ -33,13 +33,14 @@
 
                 </div>
                 <div class="col">
-
-                </div>
-                <div class="col">
                     <span class="navbar-text">
-                        <a class="nav-link active" routerLink="/login-register">
-                            <h4 class="iniciar-sesion"><i class="fa-regular fa-circle-user"></i></h4>
-                        </a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                            <li class="nav-item mx-4"> <!-- Agrega margen horizontal -->
+                                <a class="nav-link active" routerLink="/login-register">
+                                    <h4 class="iniciar-sesion">Iniciar Sesion</h4>
+                                </a>
+                            </li>
+                        </ul>
                     </span>
                 </div>
 
