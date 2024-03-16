@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import $ from 'jquery';
 import { ControlUsersService } from '../control-users.service';
 import { UsuarioR, UsuarioL } from '../shared/usuario.interface';
-import { response } from 'express';
-import { error } from 'console';
 
 
 const dateValidator: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
@@ -46,7 +45,7 @@ export class LoginRegisterComponent implements OnInit {
     contrasena: ''
   };
 
-  constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private ControlUser: ControlUsersService) { }
+  constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private ControlUser: ControlUsersService, private router: Router) { }
 
   ngOnInit(): void {
     this.initializeLoginForm();
@@ -146,6 +145,7 @@ export class LoginRegisterComponent implements OnInit {
           } else {
             sessionStorage.setItem('DNI', respuesta[0]);
             this.toastr.success('Usuario logueado correctamente');
+            this.router.navigate(['/loged']);
           }
         },
         error => {

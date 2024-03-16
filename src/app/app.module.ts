@@ -14,12 +14,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { HomeLogedComponent } from './home-loged/home-loged.component';
+import { VerificadorSesionGuard } from './verificador-sesion.guard';
 
 
 
 const appRoutes: Routes = [
 
   { path: '', component: HomeComponent },
+  { path: 'loged', component: HomeLogedComponent, canActivate: [VerificadorSesionGuard] },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login-register', component: LoginRegisterComponent },
   { path: 'calendario', component: CalendarioComponent },
