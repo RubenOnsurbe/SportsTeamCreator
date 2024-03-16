@@ -3,7 +3,7 @@
 
         <div class="container-fluid">
             <div class="col">
-                <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt="" width="20%"></a>
+                <a class="navbar-brand" routerLink="/loged"><img src="./assets/img/logo.png" alt="" width="20%"></a>
             </div>
             <button class="navbar-toggler botonResponsive" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
@@ -14,19 +14,19 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <div class="col">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
-                        <li class="nav-item mx-4"> <!-- Agrega margen horizontal -->
+                        <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
                             <a class="nav-link active" aria-current="page" href="#">
-                                <h4 class="opcion-header">Info</h4>
+                                <h4 class="opcion-header">Mis Clubes</h4>
                             </a>
                         </li>
-                        <li class="nav-item mx-4"> <!-- Agrega margen horizontal -->
+                        <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
                             <a class="nav-link active" aria-current="page" href="#">
-                                <h4 class="opcion-header">Contacto</h4>
+                                <h4 class="opcion-header">Crear Club</h4>
                             </a>
                         </li>
-                        <li class="nav-item mx-4"> <!-- Agrega margen horizontal -->
+                        <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
                             <a class="nav-link active" aria-current="page" href="#">
-                                <h4 class="opcion-header">Manual</h4>
+                                <h4 class="opcion-header">Ayuda</h4>
                             </a>
                         </li>
                     </ul>
@@ -37,8 +37,8 @@
                 </div>
                 <div class="col">
                     <span class="navbar-text">
-                        <a class="nav-link active" routerLink="/login-register">
-                            <h4 class="cerrar-sesion">Cerrar Sesion</h4>
+                        <a class="nav-link active" (click)="cerrarSesion()" routerLink="/login-register">
+                            <h4 class="cerrar-sesion">Cerrar Sesión</h4>
                         </a>
                     </span>
                 </div>
@@ -50,24 +50,19 @@
 
     <br><br><br><br><br>
     <section>
-
         <div class="container mt-5">
-
-
+            <div *ngIf="noTieneClubes">
+                <h3>No tienes clubes</h3>
+            </div>
+            <div *ngIf="clubes.length > 0" class="card-deck">
+                <div class="card" *ngFor="let club of clubes">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ club.nombre }}</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container">
-
-
-        </div>
-
-        <div class="informacion">
-
-
-
-        </div>
-
-
-
     </section>
+
 
 </div>

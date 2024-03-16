@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +16,10 @@ export class ControlUsersService {
 
   register(data: any) {
     return this.http.post(`${this.URL}/crear-usuario`, data);
+  }
+
+  clubesUsuario(data: any): Observable<any[]> {
+    return this.http.post<any[]>(`${this.URL}/clubesUsuario`, data);
   }
 
 }
