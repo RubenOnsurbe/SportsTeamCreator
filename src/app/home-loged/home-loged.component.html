@@ -1,40 +1,45 @@
 <div class="body">
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md header py-3 fixed-top">
-
+        <!-- Contenedor de la barra de navegación -->
         <div class="container-fluid">
+            <!-- Logo -->
             <div class="col">
                 <a class="navbar-brand" routerLink="/loged"><img src="./assets/img/logo.png" alt="" width="20%"></a>
             </div>
+            <!-- Botón de menú para dispositivos pequeños -->
             <button class="navbar-toggler botonResponsive" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
+            <!-- Contenido de la barra de navegación -->
             <div class="collapse navbar-collapse" id="navbarText">
+                <!-- Opciones de navegación -->
                 <div class="col">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
-                        <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
-                            <a class="nav-link active" aria-current="page" href="#">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#" [routerLink]="['.']"
+                                (click)="mostrarFormulario = false">
                                 <h4 class="opcion-header">Mis Clubes</h4>
                             </a>
                         </li>
-                        <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
-                            <a class="nav-link active" aria-current="page" href="#">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#" [routerLink]="['.']"
+                                (click)="mostrarFormulario = true">
                                 <h4 class="opcion-header">Crear Club</h4>
                             </a>
                         </li>
+
                         <li class="nav-item mx-2"> <!-- Agrega margen horizontal -->
                             <a class="nav-link active" aria-current="page" href="#">
                                 <h4 class="opcion-header">Ayuda</h4>
                             </a>
                         </li>
                     </ul>
-
                 </div>
-                <div class="col">
-
-                </div>
+                <!-- Botón de cerrar sesión -->
                 <div class="col">
                     <span class="navbar-text">
                         <a class="nav-link active" (click)="cerrarSesion()" routerLink="/login-register">
@@ -42,30 +47,60 @@
                         </a>
                     </span>
                 </div>
-
             </div>
-
         </div>
     </nav>
 
+    <!-- Espacio para los clubes -->
+    <!-- Espacio para los clubes o formulario de creación de club -->
     <br><br><br><br><br>
-    <section>
-        <div class="container mt-5">
-            <div *ngIf="noTieneClubes">
-                <h3>No tienes clubes</h3>
-            </div>
-            <div *ngIf="clubes.length > 0" class="card-deck">
-                <div class="card m-3" *ngFor="let club of clubes">
-                    <a class="text-decoration-none text-dark" routerLink="/club/{{club.id_club}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ club.nombre }}</h5>
-                        </div>
-                    </a>
-
-                </div>
+    <section *ngIf="!mostrarFormulario">
+        <div *ngIf="clubes.length > 0" class="card-deck">
+            <div class="card m-3" *ngFor="let club of clubes">
+                <a class="text-decoration-none text-dark" routerLink="/club/{{club.id_club}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ club.nombre }}</h5>
+                    </div>
+                </a>
             </div>
         </div>
+
+        <!-- Formulario para unirse a un club -->
+        <div class="mt-5">
+            <h3 class="m-3">Unirse a un club:</h3>
+            <form class="m-3" (submit)="unirseAClub()">
+                <div class="form-group">
+                    <label for="usuarioClub">Usuario del equipo:</label>
+                    <input type="text" class="form-control mt-3" id="usuarioClub" [(ngModel)]="usuarioClub"
+                        name="usuarioClub">
+                    <label for="codigoAcceso" class="">Código de acceso:</label>
+                    <input type="text" class="form-control mt-3" id="codigoAcceso" [(ngModel)]="codigoAcceso"
+                        name="codigoAcceso">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Unirse</button>
+            </form>
+        </div>
+        <!-- Resto del código actual de la sección de clubes -->
     </section>
 
-
+    <!-- Formulario para crear un nuevo club -->
+    <form *ngIf="mostrarFormulario" (submit)="crearClub()">
+        <!-- Input para el nombre del club -->
+        <div class="form-group">
+            <label for="nombreClub" class="m-2">Nombre del Club:</label>
+            <input type="text" class="form-control m-2" id="nombreClub" [(ngModel)]="nombreClub" name="nombreClub">
+        </div>
+        <div class="form-group">
+            <label for="usuarioClub2" class="m-2">Usuario del Club:</label>
+            <input type="text" class="form-control m-2" id="usuarioClub2" [(ngModel)]="usuarioClub" name="usuarioClub2">
+        </div>
+        <!-- Input para el código de acceso del club -->
+        <div class="form-group">
+            <label for="codigoAcceso" class="m-2">Código de acceso:</label>
+            <input type="text" class="form-control m-2" id="codigoAcceso" [(ngModel)]="codigoAcceso"
+                name="codigoAcceso">
+        </div>
+        <!-- Botón para crear el club -->
+        <button type="submit" class="btn btn-primary m-2">Crear Club</button>
+    </form>
 </div>

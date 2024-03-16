@@ -21,5 +21,11 @@ export class ControlUsersService {
   clubesUsuario(data: any): Observable<any[]> {
     return this.http.post<any[]>(`${this.URL}/clubesUsuario`, data);
   }
+  crearClub(data: any) {
+    return this.http.post(`${this.URL}/crearClub`, data);
+  }
+  unirseAClub(data: any) {
+    return this.http.post(`${this.URL}/unirseAClub`, data);
+  }
 
 }
