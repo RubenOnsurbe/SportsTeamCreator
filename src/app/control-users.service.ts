@@ -30,5 +30,17 @@ export class ControlUsersService {
   dejarClub(data: any) {
     return this.http.post(`${this.URL}/dejarClub`, data);
   }
+  cuantosClubes() {
+    return this.http.post(`${this.URL}/cuantosClubes`, {});
+  }
+  cuantosUsuarios() {
+    return this.http.post(`${this.URL}/cuantosUsuarios`, {});
+  }
+  nuevaVisita() {
+    return this.http.post(`${this.URL}/nuevaVisita`, {});
+  }
+  cuantasVisitas() {
+    return this.http.post(`${this.URL}/cuantasVisitas`, {});
+  }
 
 }

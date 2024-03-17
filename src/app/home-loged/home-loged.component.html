@@ -56,6 +56,7 @@
     <section *ngIf="!mostrarFormulario">
         <!-- Espacio para los clubes -->
         <div *ngIf="clubes.length > 0" class="card-deck">
+            <h3 class="m-3">Mis clubes:</h3>
             <div class="card m-3" *ngFor="let club of clubes">
                 <a class="text-decoration-none text-dark" routerLink="/club/{{club.id_club}}">
                     <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-start">
