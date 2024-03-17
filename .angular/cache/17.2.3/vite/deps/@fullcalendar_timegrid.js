@@ -1,6 +1,6 @@
 import {
   DayTable
-} from "./chunk-HH62RSX3.js";
+} from "./chunk-E5YCNENL.js";
 import {
   BaseComponent,
   BgEvent,
@@ -56,7 +56,7 @@ import {
   startOfDay,
   wholeDivideDurations,
   y
-} from "./chunk-V5PRIUJA.js";
+} from "./chunk-SM4N4EWN.js";
 import "./chunk-WKYGNSYM.js";
 
 // node_modules/@fullcalendar/timegrid/internal.js

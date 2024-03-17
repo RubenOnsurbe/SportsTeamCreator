@@ -47,7 +47,7 @@ import {
   setRef,
   sortEventSegs,
   y
-} from "./chunk-V5PRIUJA.js";
+} from "./chunk-SM4N4EWN.js";
 
 // node_modules/@fullcalendar/daygrid/internal.js
 var TableView = class extends DateComponent {
@@ -1038,4 +1038,4 @@ export {
   DayTableView,
   TableDateProfileGenerator
 };
-//# sourceMappingURL=chunk-HH62RSX3.js.map
+//# sourceMappingURL=chunk-E5YCNENL.js.map

@@ -1,10 +1,10 @@
 import {
   DayTableView,
   TableDateProfileGenerator
-} from "./chunk-HH62RSX3.js";
+} from "./chunk-E5YCNENL.js";
 import {
   createPlugin
-} from "./chunk-V5PRIUJA.js";
+} from "./chunk-SM4N4EWN.js";
 import "./chunk-WKYGNSYM.js";
 
 // node_modules/@fullcalendar/daygrid/index.js
