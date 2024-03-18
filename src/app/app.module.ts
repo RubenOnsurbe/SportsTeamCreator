@@ -15,6 +15,7 @@ import { CalendarioComponent } from './calendario/calendario.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { HomeLogedComponent } from './home-loged/home-loged.component';
 import { VerificadorSesionGuard } from './verificador-sesion.guard';
+import { PruebaHomeLogedComponent } from './prueba-home-loged/prueba-home-loged.component';
 
 
 
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'login-register', component: LoginRegisterComponent },
   { path: 'calendario', component: CalendarioComponent },
+  { path: 'pruebaLoged', component: PruebaHomeLogedComponent }
 
 
 ];
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginRegisterComponent,
     CalendarioComponent,
-    HomeLogedComponent
+    HomeLogedComponent,
+    PruebaHomeLogedComponent
   ],
   imports: [
     BrowserModule,

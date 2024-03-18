@@ -1,0 +1,94 @@
+
+.primeraCol{
+    margin-top: 80px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .primeraCol{
+        margin-top: 10px;
+    }
+    .segundaCol{
+        margin-top: 10px;
+        margin-bottom: initial;
+    }
+
+    .inputBox_container{
+        width: 100%;
+        margin: 0;
+    }
+
+    .imagenUsuario{
+        margin-right: 30px;
+    }
+}
+
+h1{
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 36px;
+}
+h2{
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+
+
+.mod1{
+    background-color: blueviolet;
+}
+
+.mod2{
+    background-color:white;
+}
+
+
+/* CSS del input para buscar club */
+.inputBox_container {
+    display: flex;
+    padding-left: 7px;
+    align-items: center;
+    flex-direction: row;
+    max-width: 80%;
+   
+    height: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  
+  .search_icon {
+    height: 1em;
+    margin-left: 50px;
+    margin-right: 10px;
+    fill: #abb2bf;
+  }
+  
+  .inputBox {
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    width: 90%; /* Modifica el valor para ajustar el ancho del input */
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 15px;
+    font-size: 1em;
+}
+
+  
+  ::placeholder {
+    color: #888;
+    font-size: 20px; 
+   padding-left: 10px;
+  }
+  
+
+
+
+  .principal{
+    background-color: rebeccapurple;
+   
+  }
+
+ 
