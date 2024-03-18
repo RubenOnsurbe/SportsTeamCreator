@@ -43,4 +43,13 @@ export class ControlUsersService {
     return this.http.post(`${this.URL}/cuantasVisitas`, {});
   }
 
+
+  enviarCorreoCambioContrasena(correo:string):Observable<any>{
+
+    const data = { "correo": correo };
+    return this.http.post(`${this.URL}/enviarCorreoCambioContrasena`,data) as Observable<any>;
+  }
+
+
+
 }

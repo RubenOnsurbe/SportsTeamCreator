@@ -190,7 +190,21 @@ export class LoginRegisterComponent implements OnInit {
   }
   onSubmitResetPass() {
     if (this.resetPassForm.valid) {
-      this.toastr.success('Formulario válido');
+
+      this.ControlUser.enviarCorreoCambioContrasena(this.usuarioL.correo).subscribe(
+        (response: any) => {
+          alert("Se envió un mail a tu dirección")
+        
+
+        },
+        (error) => {
+          console.error('Error al enviar el correo', error);
+          // Aquí puedes manejar cualquier error que ocurra durante la solicitud HTTP
+        }
+      );
+
+
+
     } else {
       this.toastr.error('Formulario inválido');
     }

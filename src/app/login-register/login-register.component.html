@@ -126,7 +126,7 @@
                     valido
                 </div>
                 <div class="contenedor-input"> <label> Correo<span class="req">*</span> </label> <input id="email"
-                        type="email" formControlName="email" required> </div>
+                        type="email" formControlName="email" required [(ngModel)]="usuarioL.correo"> </div>
                 <button type="submit" class="button button-block" [disabled]="resetPassForm.invalid">Enviar
                     Correo</button>
             </form>
