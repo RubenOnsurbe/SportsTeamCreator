@@ -1,48 +1,156 @@
+.body{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    padding-right: 60px; 
+}
 
-.primeraCol{
-    margin-top: 80px;
+.parteIzq{
+    margin-right: 100px;
 }
 
 
-@media screen and (max-width: 768px) {
 
-    .primeraCol{
-        margin-top: 10px;
-    }
-    .segundaCol{
-        margin-top: 10px;
-        margin-bottom: initial;
-    }
-
-    .inputBox_container{
-        width: 100%;
-        margin: 0;
-    }
-
-    .imagenUsuario{
-        margin-right: 30px;
-    }
+.parteDer{
+    width: 100%;
 }
+
+.titulo{
+    background-color: chartreuse;
+    width: 40%;
+    margin-right: 50px;
+}
+
+
+.header{
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+}
+
+.buscadorYFoto{
+    display: flex;
+    width: 60%;
+    background-color: cornflowerblue;   
+}
+.fotoPerfil {
+    background-color: aquamarine;
+    width: 20%;
+    height: 60px;
+}
+
+.redondelFoto{
+    float: right;
+    height: 60px;
+    width: 60px;
+    background-color: blueviolet;
+    border-radius: 100%;
+}
+
+/* CSS de contenido de abajo (calendario y clubes) */
+
+.recuadros{
+    width: 100%;
+    background-color:coral;
+    height: 800px;
+    margin-top: 40px;
+}
+
+.recuadrosMedio{
+    width: 100%;
+    background-color: blue;
+    height: 400px;
+    display: flex;
+}
+
+.recuadroCalendario{
+    border-radius: 24px;
+    width: 40%;
+    height: 400px;
+    background-color: antiquewhite;
+    margin-right: 50px;
+}
+
+.recuadroOpcionesClub {
+    border-radius: 24px;
+    width: 60%;
+    height: 400px;
+    background-color: antiquewhite;
+
+}
+
+.recuadroAbajo{
+    margin-top: 50px;
+    height: 400px;
+    background-color: bisque;
+    border-radius: 24px;
+}
+
+
+
+
+
 
 h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-family: 'Roboto';
-    font-size: 36px;
 }
 h2{
-    font-family: 'Roboto';
     font-size: 24px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.mod1{
-    background-color: blueviolet;
+
+
+
+@media (max-width: 991.98px) {
+    .body {
+        flex-direction: column; /* Cambiar la dirección del flex container a columna */
+        padding-right: 0; /* Eliminar el relleno derecho */
+        margin-top: 0; /* Eliminar el margen superior */
+    }
+    .buscadorYFoto{
+        display: block;
+    }
+
+    .parteIzq {
+        display: none; /* Ocultar la parte izquierda */
+    }
+
+    .parteDer {
+        width: 100%; /* Establecer el ancho al 100% */
+    }
+
+    .header {
+        display: block; /* Cambiar la visualización a bloque */
+    }
+
+    .titulo {
+        width: 100%; /* Establecer el ancho al 100% */
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+
+    .buscadorYFoto {
+        width: 100%; /* Establecer el ancho al 100% */
+    }
+   
+    .inputBox_container {
+        width: 100%; /* Establecer el ancho al 100% */
+    }
 }
 
-.mod2{
-    background-color:white;
+ul{
+    list-style: none;
+    line-height: 100px;
 }
 
+
+
+p{
+    float: right;
+}
 
 /* CSS del input para buscar club */
 .inputBox_container {
@@ -50,13 +158,14 @@ h2{
     padding-left: 7px;
     align-items: center;
     flex-direction: row;
-    max-width: 80%;
+    width: 80%;
    
-    height: 50px;
+    height: 60px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
     border-radius: 24px;
     overflow: hidden;
+    
   }
   
   .search_icon {
@@ -86,53 +195,4 @@ h2{
   }
   
 
-
-
-  .principal{
-    background-color: rebeccapurple;
-   
-  }
-
- .segundoContainer{
-    width: 100%;
- }
-
-
- .contenidoCentro{
-    margin-right: 20px;
- }
- .extra-thin-column {
-    width: 4%; /* Puedes ajustar este valor según lo delgado que desees la columna */
-}
-
-
-.calendario{
-    background-color: #f8f4f4;
-    padding-top: 10px;
-    border-radius: 24px;
-    
-}
-
-.calendarioReal{
-
-    max-height: 100%;
-}
-
-
-.opcionesClubes{
-    border-radius: 24px;
-    background-color: #f8f4f4;
-}
-
-
-@media (max-width: 991.98px) {
-    
-    .contenidoPrincipal{
-        background-color: red;
-    }
-  }
-
-.contenidoPrincipal{
-    display: flex;
-}
 

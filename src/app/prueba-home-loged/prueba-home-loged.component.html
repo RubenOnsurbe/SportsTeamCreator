@@ -1,112 +1,103 @@
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-<div class="container-fluid mt-5 pr-3">
-    <div class="row">
 
-        <div class="d-lg-none fluid">
-            <button class="btn btn-primary" (click)="desplegarMenuOpciones()"><i class="fa-solid fa-bars"></i></button>
-        </div>
-        
 
-        <!-- Iconos de la izquierda -->
-        <div id="opcionesIzquierda" class="col-12 col-lg-1 bg-primary text-align-left d-none d-lg-block">
-            <div class="row my-3"> <!-- Agregamos un margen vertical de 3 espacios en todas las pantallas -->
-                <div class="col-3 col-lg-12 primeraCol mb-5">
-                    <i class="fa-solid fa-house fa-2x"></i>
-                </div>
-                <div class="col-3 col-lg-12 segundaCol mb-5"> <!-- Agregamos un margen vertical de 2 espacios en pantallas grandes y mayores -->
-                    <i class="fa-solid fa-gear fa-2x"></i>
-                </div>
-                <div class="col-3 col-lg-12 segundaCol"> <!-- Agregamos un margen vertical de 2 espacios en pantallas grandes y mayores -->
-                    <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
-                </div>
+
+
+<div class="body">
+
+    <div class="parteIzq">
+
+      
+
+        <ul class="listaIconos">
+            <li> <i class="fa-solid fa-gear fa-2x"></i></li>
+            <li> <i class="fa-solid fa-house fa-2x"></i></li>
+            <li><i class="fa-solid fa-right-from-bracket fa-2x"></i></li>
+        </ul>
+    </div>
+
+
+
+    <div class="parteDer">
+
+
+        <div class="header">
+
+      
+            <div class="titulo">
+                <h1>¡Bienvenido, USUARIO!</h1>
+                <h2>Gestiona tus clubes</h2>
             </div>
+
+            <div class="buscadorYFoto">
+
+                <div class="inputBox_container">
             
-        </div>
-        
-        
-        <!-- Todo el contenido de la pagina -->
-        <div class="col-12 col-lg-11 bg-secondary main">
+                    <input class="inputBox" id="inputBox" type="text" placeholder="Buscar club">
+                    <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+                        <path d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                        </path>
+                      </svg>
+                  </div>
 
-            <div class="row">
-
-                <div class="col-12 col-lg-5 mod1">
+                  <div class="fotoPerfil">
                     
-                    <h1>¡Bienvenido NombreUsuario!</h1>
-                    <h2>Administra tus clubes</h2>
-
-
+                        <div class="redondelFoto">
+                            a
+                        </div>
+                  </div>
+                 
+            </div>
 
                    
+       
+
+        </div>
 
 
+        <div class="recuadros">
+            
+            <div class="recuadrosMedio">
 
-
+                <div class="recuadroCalendario">
 
 
 
                 </div>
-                <div class="col-1 extra-thin-column d-none d-lg-block">
+
+                <div class="recuadroOpcionesClub">
 
                 </div>
 
-                <!-- Columna de la derecha -->
-                <div class="col-12 col-lg-6 mod2 contenidoDerecha">
-                    
-                    <div class="row">
+            </div>
 
-                        <!-- Formulario para buscar club concreto -->
-                        <div class="col-11 col-lg-10 content-align-center">
-                            <div class="inputBox_container">
-                                
-                                <input class="inputBox" id="inputBox" type="text" placeholder="Buscar club">
-                                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
-                                    <path d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
-                                    </path>
-                                  </svg>
-                              </div>
-                        </div>
+            <div class="recuadroAbajo">
+
+                
+            </div>
+
+        </div>
+
+
+    </div>
 
 
 
+</div>
 
 
-                        <div class="col-1 col-lg-2 imagenUsuario">
-                            Imagen usuario
-                        </div>
-                        
-                        
+
+                  
+
+
+
+
 
                        
 
 
 
 
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="contenidoPrincipal">
-
-                    <div class="calendario">
-
-                        Aqui va el calendario
-                    </div>
-
-                    
-                    <div class="opcionesClubes">
-
-                        Aqui va opciones clubes
-                    </div>
-                    
-            </div>
-            
-            
-        </div>
-
-    </div>
-</div>
 
 
 
