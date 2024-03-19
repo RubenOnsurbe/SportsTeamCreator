@@ -7,91 +7,97 @@
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e4f63bfc",
+      "fileHash": "7d25fc9c",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "cec59a5b",
+      "fileHash": "bdcc5392",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "4e312f92",
+      "fileHash": "d286b06e",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "3f2d9512",
+      "fileHash": "ed812e85",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "0929cc40",
+      "fileHash": "5c09c3be",
       "needsInterop": false
     },
     "@angular/platform-browser/animations": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
       "file": "@angular_platform-browser_animations.js",
-      "fileHash": "6c8ed644",
+      "fileHash": "e798067d",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "c77fdcee",
+      "fileHash": "160d5d95",
       "needsInterop": false
     },
     "@fortawesome/angular-fontawesome": {
       "src": "../../../../../node_modules/@fortawesome/angular-fontawesome/fesm2022/angular-fontawesome.mjs",
       "file": "@fortawesome_angular-fontawesome.js",
-      "fileHash": "5626928d",
+      "fileHash": "bf31a089",
       "needsInterop": false
     },
     "@fullcalendar/angular": {
       "src": "../../../../../node_modules/@fullcalendar/angular/fesm2020/fullcalendar-angular.mjs",
       "file": "@fullcalendar_angular.js",
-      "fileHash": "f094c178",
+      "fileHash": "2669ce93",
       "needsInterop": false
     },
     "@fullcalendar/daygrid": {
       "src": "../../../../../node_modules/@fullcalendar/daygrid/index.js",
       "file": "@fullcalendar_daygrid.js",
-      "fileHash": "bbb98dfb",
+      "fileHash": "acc79cb7",
       "needsInterop": false
     },
     "@fullcalendar/interaction": {
       "src": "../../../../../node_modules/@fullcalendar/interaction/index.js",
       "file": "@fullcalendar_interaction.js",
-      "fileHash": "64faf71f",
+      "fileHash": "fa205e04",
       "needsInterop": false
     },
     "@fullcalendar/timegrid": {
       "src": "../../../../../node_modules/@fullcalendar/timegrid/index.js",
       "file": "@fullcalendar_timegrid.js",
-      "fileHash": "f31ef834",
+      "fileHash": "71f74fb2",
       "needsInterop": false
     },
     "jquery": {
       "src": "../../../../../node_modules/jquery/dist/jquery.js",
       "file": "jquery.js",
-      "fileHash": "1670fe14",
+      "fileHash": "eb92f9c3",
       "needsInterop": true
     },
     "ngx-toastr": {
       "src": "../../../../../node_modules/ngx-toastr/fesm2022/ngx-toastr.mjs",
       "file": "ngx-toastr.js",
-      "fileHash": "b1e48f45",
+      "fileHash": "92e6c2c4",
       "needsInterop": false
     }
   },
   "chunks": {
     "chunk-ZA7KZE7J": {
       "file": "chunk-ZA7KZE7J.js"
+    },
+    "chunk-E5YCNENL": {
+      "file": "chunk-E5YCNENL.js"
+    },
+    "chunk-SM4N4EWN": {
+      "file": "chunk-SM4N4EWN.js"
     },
     "chunk-HTW6LHVA": {
       "file": "chunk-HTW6LHVA.js"
@@ -104,12 +110,6 @@
     },
     "chunk-Y7BWGG4Z": {
       "file": "chunk-Y7BWGG4Z.js"
-    },
-    "chunk-E5YCNENL": {
-      "file": "chunk-E5YCNENL.js"
-    },
-    "chunk-SM4N4EWN": {
-      "file": "chunk-SM4N4EWN.js"
     },
     "chunk-WKYGNSYM": {
       "file": "chunk-WKYGNSYM.js"
