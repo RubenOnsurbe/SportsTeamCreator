@@ -65,6 +65,8 @@ h2{
     margin-right: 10px;
     fill: #abb2bf;
   }
+
+  
   
   .inputBox {
     background-color: transparent;
@@ -72,7 +74,7 @@ h2{
     outline: none;
     width: 90%; /* Modifica el valor para ajustar el ancho del input */
     border: 0;
-    padding: 0.5em 1.5em 0.5em 15px;
+    padding: 0.5em 1.5em 0.5em 10px;
     font-size: 1em;
 }
 
@@ -91,4 +93,46 @@ h2{
    
   }
 
- 
+ .segundoContainer{
+    width: 100%;
+ }
+
+
+ .contenidoCentro{
+    margin-right: 20px;
+ }
+ .extra-thin-column {
+    width: 4%; /* Puedes ajustar este valor según lo delgado que desees la columna */
+}
+
+
+.calendario{
+    background-color: #f8f4f4;
+    padding-top: 10px;
+    border-radius: 24px;
+    
+}
+
+.calendarioReal{
+
+    max-height: 100%;
+}
+
+
+.opcionesClubes{
+    border-radius: 24px;
+    background-color: #f8f4f4;
+}
+
+
+@media (max-width: 991.98px) {
+    
+    .contenidoPrincipal{
+        background-color: red;
+    }
+  }
+
+.contenidoPrincipal{
+    display: flex;
+}
+
