@@ -1,0 +1,11 @@
+.pagination {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+ul{
+    list-style: none;
+}
+li{
+    border-bottom: 1px solid black;
+}

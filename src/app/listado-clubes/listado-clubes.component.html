@@ -1,0 +1,23 @@
+
+@if (mostrarClubes) {
+<div *ngIf="clubesPaginados">
+    <!-- Iterar sobre los clubes -->
+    <ul>
+      <li *ngFor="let club of clubesPaginados.data">
+        <h4>{{ club.nombre }}</h4>
+      </li>
+    </ul>
+  
+    <!-- Controles de paginación -->
+    <nav *ngIf="clubesPaginados.last_page > 1">
+      <ul class="pagination">
+        <li class="page-item" [ngClass]="{ disabled: clubesPaginados.current_page === 1 }">
+          <a class="page-link" (click)="cargarPagina(clubesPaginados.current_page - 1)">Previous</a>
+        </li>
+        <li class="page-item" [ngClass]="{ disabled: clubesPaginados.current_page === clubesPaginados.last_page }">
+          <a class="page-link" (click)="cargarPagina(clubesPaginados.current_page + 1)">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+}

@@ -193,7 +193,8 @@ export class LoginRegisterComponent implements OnInit {
 
       this.ControlUser.enviarCorreoCambioContrasena(this.usuarioL.correo).subscribe(
         (response: any) => {
-          alert("Se envió un mail a tu dirección")
+          alert("Comprueba tu correo, se te envio un mail para el cambio de contrasena");
+        
         
 
         },

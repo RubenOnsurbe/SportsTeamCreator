@@ -16,6 +16,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { HomeLogedComponent } from './home-loged/home-loged.component';
 import { VerificadorSesionGuard } from './verificador-sesion.guard';
 import { PruebaHomeLogedComponent } from './prueba-home-loged/prueba-home-loged.component';
+import { ListadoClubesComponent } from './listado-clubes/listado-clubes.component';
 
 
 
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     LoginRegisterComponent,
     CalendarioComponent,
     HomeLogedComponent,
-    PruebaHomeLogedComponent
+    PruebaHomeLogedComponent,
+    ListadoClubesComponent
   ],
   imports: [
     BrowserModule,

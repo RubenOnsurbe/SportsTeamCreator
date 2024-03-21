@@ -1,6 +1,6 @@
 .header {
     background-color: #557FFF;
-
+    
 }
 
 .botonResponsive {
@@ -34,6 +34,13 @@
 .navLink {
     color: #c2fbd7;
 }
+
+.opcion-header {
+    border: 2px solid white; /* Establece un borde blanco de 2px */
+    padding: 5px 10px; /* Agrega relleno alrededor del texto */
+    border-radius: 12px; /* Agrega bordes redondeados */
+}
+
 
 
 .opcion-header,
