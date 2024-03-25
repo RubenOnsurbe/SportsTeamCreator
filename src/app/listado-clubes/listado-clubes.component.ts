@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataClubService } from '../data-club.service';
 import { Club } from '../shared/club.interface';
+import { Router, RouterLink } from '@angular/router';
 interface ClubesPaginados {
   current_page: number;
   data: Club[];
@@ -33,7 +34,7 @@ ngOnInit(){
 
 
 }
-constructor(private servicioClubes:DataClubService){}
+constructor(private servicioClubes:DataClubService, private router: Router){}
 
   buscarClub(clubABuscar:string){
 
@@ -98,6 +99,9 @@ constructor(private servicioClubes:DataClubService){}
     
   }
     
+  guardarNombreClub(nombreClub:string){
+    this.router.navigate(['/infoClub'], { queryParams: { nombreClub: nombreClub } });
+  }
     
   
 

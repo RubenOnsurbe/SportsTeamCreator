@@ -101,7 +101,15 @@ h2{
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
+a:hover{
+    color: #0d8bd9;
+    
+}
 
 
 
@@ -186,7 +194,7 @@ p{
   }
   .listadoClubesWrapper{
     padding-top: 20px;
-    background-color: blue;
+   
     position: absolute;
     margin-top: 60px;
     margin-left: 24px;

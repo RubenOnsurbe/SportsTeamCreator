@@ -32,15 +32,17 @@ export class PruebaHomeLogedComponent {
 mostrarClubes:boolean=false;
 
 llamarHijoBuscar(){
-  
+  document.getElementById("listadoClubesWrapper")!.style.backgroundColor="white"
   this.listadoClubesComponent.buscarClub(this.clubABuscar);
 }
 
 llamarHijoMostrarClubes(){
+  document.getElementById("listadoClubesWrapper")!.style.backgroundColor="white"
   this.listadoClubesComponent.buscarClub(this.clubABuscar);
 }
 
 llamarHijoOcultarClubes(){
+  document.getElementById("listadoClubesWrapper")!.style.backgroundColor="initial";
   this.listadoClubesComponent.mostrarClubes=false;
 }
 

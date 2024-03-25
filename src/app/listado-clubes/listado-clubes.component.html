@@ -1,10 +1,14 @@
 
 @if (mostrarClubes) {
-<div *ngIf="clubesPaginados">
+<div *ngIf="clubesPaginados" class="listaClubes">
     <!-- Iterar sobre los clubes -->
+    @if(clubesPaginados.data.length==0){
+      <h4>Club no encontrado</h4>
+    }
     <ul>
-      <li *ngFor="let club of clubesPaginados.data">
+      <li class="club" *ngFor="let club of clubesPaginados.data" (click)="guardarNombreClub(club.nombre)">
         <h4>{{ club.nombre }}</h4>
+        
       </li>
     </ul>
   

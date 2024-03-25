@@ -8,4 +8,17 @@ ul{
 }
 li{
     border-bottom: 1px solid black;
+    
 }
+
+.listaClubes{
+    background-color: white;
+}
+
+
+.club:hover, a:hover{
+    background-color: #BDE3F2;
+    color: #0D9BD9;
+    cursor:pointer;
+}
+
